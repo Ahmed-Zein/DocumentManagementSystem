@@ -1,0 +1,32 @@
+﻿services:
+  #  dms-webapi:
+  #    image: dms-webapi
+  #    build:
+  #      context: .
+  #      dockerfile: dms-webapi/Dockerfile
+  
+  postgres:
+    image: postgres
+    container_name: "postgres-2"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: dms
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    volumes:
+      - DB:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pg-admin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: greybeast@popos.com
+      PGADMIN_DEFAULT_PASSWORD: 123
+    ports:
+      - "5050:80"
+    volumes:
+      - PG:/var/lib/pgadmin
+volumes:
+  DB:
+  PG:

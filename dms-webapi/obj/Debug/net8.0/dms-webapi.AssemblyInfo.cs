@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dms-webapi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+beb25ab506afa75f4dd5167ca9fa63cb1817960a")]
 [assembly: System.Reflection.AssemblyProductAttribute("dms-webapi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dms-webapi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,88 @@
+# Ignore build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code files
+.vscode/
+
+# Rider IDE files
+.idea/
+*.sln.iml
+
+# Ignore logs
+*.log
+logs/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.tmp.*
+
+# Ignore package manager directories
+node_modules/
+bower_components/
+
+# Ignore .NET-generated files
+*.vspscc
+.vscode/
+.project
+*.dbmdl
+*.pdb
+*.publishsettings
+*.ps1
+*.testsettings
+*.userprefs
+.vs/
+
+# NuGet packages
+*.nupkg
+.nuget/
+
+# Dotnet global tools
+.tools/
+
+# Ignore appsettings environment files (keep `appsettings.json` if needed)
+appsettings.*.json
+
+# Ignore secrets
+secrets.json
+
+# Include NuGet packages directory if you use package restore
+!packages/*.config
+
+# Ignore database and migration files
+*.mdf
+*.ldf
+*.sqlite
+migrations/
+
+# Ignore Rider IDE settings
+.idea/
+
+# Ignore JetBrains Rider UI assets
+.idea/
+
+# ASP.NET Scaffolding generated code
+ScaffoldingReadMe.txt
+
+# Ignore EF Core Migrations history
+Migrations/
+
+# Ignore .NET Core runtime cache files
+*.deps.json
+*.runtimeconfig.json
+
+# Other VS Generated files
+Generated_Code/
+
+# Avoid sensitive information exposure
+env/
+.env
+
