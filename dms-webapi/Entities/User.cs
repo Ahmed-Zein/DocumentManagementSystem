@@ -1,21 +1,15 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace dms_webapi.Entities;
 
-public class User
+public class User : IdentityUser
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
-
-    [Required] public string FirstName { get; set; }
-    [Required] public string LastName { get; set; }
-
-    [Required, EmailAddress] public string Email { get; set; }
-    [Required] public string Password { get; set; }
-    [Required] public Role Role { get; set; }
-    [Required] public string WorkspaceName { get; set; }
+    [Required, MaxLength(255)] public string FirstName { get; set; } = string.Empty;
+    [Required, MaxLength(255)] public string LastName { get; set; } = string.Empty;
+    [Required] public override string Email { get; set; } = string.Empty;
+    [Required] public Role Role { get; set; } = Role.DmsUser;
+    [Required, MaxLength(255)] public string WorkspaceName { get; set; } = string.Empty;
 
     public ICollection<Directory> Directories { get; set; } = new List<Directory>();
 }
